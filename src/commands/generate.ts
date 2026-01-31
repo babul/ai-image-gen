@@ -15,10 +15,7 @@ export function createGenerateCommand(): Command {
     .description('Generate an AI image from a text prompt')
     .argument('<prompt>', 'Image description')
     .option('-s, --size <size>', 'Aspect ratio (3:2) or dimensions (1024x768)', '1024x1024')
-    .option('-o, --output <path>', 'Output file path', () => {
-      const timestamp = Date.now();
-      return `./image-${timestamp}.png`;
-    })
+    .option('-o, --output <path>', 'Output file path')
     .option('-q, --quality <quality>', 'Image quality (standard|hd)', 'standard')
     .option('--style <style>', 'Image style (vivid|natural)', 'natural')
     .option('-m, --model <model>', 'OpenAI model', 'dall-e-3')
@@ -56,7 +53,10 @@ export function createGenerateCommand(): Command {
         // Download and process image
         spinner.start('Processing image...');
         const imageBuffer = await downloadImage(imageUrl);
-        const outputPath = resolve(options.output!);
+
+        // Use provided output path or generate default
+        const outputFilePath = options.output || `./image-${Date.now()}.png`;
+        const outputPath = resolve(outputFilePath);
 
         const metadata = await processImage(
           imageBuffer,
