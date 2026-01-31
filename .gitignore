@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test images
+*.png
+*.jpg
+*.jpeg
+*.webp
+!examples/*.png
+
+# NPM package
+*.tgz
