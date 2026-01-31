@@ -17,21 +17,21 @@ A TypeScript-based command-line tool for generating AI images with custom sizes 
 ### Using npx (Recommended - No Installation Required)
 
 ```bash
-npx ai-image-gen generate "A serene mountain landscape" --size 3:2
+npx @tmgbabul/ai-image-gen generate "A serene mountain landscape" --size 3:2
 ```
 
 ### Global Installation
 
 ```bash
-npm install -g ai-image-gen
-ai-image-gen generate "A serene mountain landscape" --size 3:2
+npm install -g @tmgbabul/ai-image-gen
+@tmgbabul/ai-image-gen generate "A serene mountain landscape" --size 3:2
 ```
 
 ### Local Project Installation
 
 ```bash
-npm install ai-image-gen
-npx ai-image-gen generate "A serene mountain landscape" --size 3:2
+npm install @tmgbabul/ai-image-gen
+npx @tmgbabul/ai-image-gen generate "A serene mountain landscape" --size 3:2
 ```
 
 ## Configuration
@@ -39,7 +39,7 @@ npx ai-image-gen generate "A serene mountain landscape" --size 3:2
 Before using the CLI, set your OpenAI API key:
 
 ```bash
-npx ai-image-gen config set OPENAI_API_KEY sk-xxxxx
+npx @tmgbabul/ai-image-gen config set OPENAI_API_KEY sk-xxxxx
 ```
 
 Alternatively, set the environment variable:
@@ -52,47 +52,47 @@ export OPENAI_API_KEY=sk-xxxxx
 
 ```bash
 # Set a config value
-npx ai-image-gen config set OPENAI_API_KEY sk-xxxxx
+npx @tmgbabul/ai-image-gen config set OPENAI_API_KEY sk-xxxxx
 
 # Get a config value
-npx ai-image-gen config get OPENAI_API_KEY
+npx @tmgbabul/ai-image-gen config get OPENAI_API_KEY
 
 # Delete a config value
-npx ai-image-gen config delete OPENAI_API_KEY
+npx @tmgbabul/ai-image-gen config delete OPENAI_API_KEY
 
 # List all config values
-npx ai-image-gen config list
+npx @tmgbabul/ai-image-gen config list
 ```
 
-Configuration is stored in `~/.ai-image-gen/config.json`.
+Configuration is stored in `~/.@tmgbabul/ai-image-gen/config.json`.
 
 ## Usage
 
 ### Basic Usage
 
 ```bash
-npx ai-image-gen generate "A serene mountain landscape at sunset"
+npx @tmgbabul/ai-image-gen generate "A serene mountain landscape at sunset"
 ```
 
 If installed globally:
 ```bash
-ai-image-gen generate "A serene mountain landscape at sunset"
+@tmgbabul/ai-image-gen generate "A serene mountain landscape at sunset"
 ```
 
 ### With Options
 
 ```bash
 # Generate with custom aspect ratio
-npx ai-image-gen generate "Blog header image" --size 3:2 --output header.png
+npx @tmgbabul/ai-image-gen generate "Blog header image" --size 3:2 --output header.png
 
 # Generate with custom dimensions
-npx ai-image-gen gen "Featured image" -s 1920x1080 -o featured.png
+npx @tmgbabul/ai-image-gen gen "Featured image" -s 1920x1080 -o featured.png
 
 # Generate with HD quality and vivid style
-npx ai-image-gen gen "Sunset over ocean" -s 16:9 -q hd --style vivid
+npx @tmgbabul/ai-image-gen gen "Sunset over ocean" -s 16:9 -q hd --style vivid
 
 # Generate as JPG
-npx ai-image-gen gen "Product photo" -s 1024x768 -f jpg
+npx @tmgbabul/ai-image-gen gen "Product photo" -s 1024x768 -f jpg
 ```
 
 ### Command Options
@@ -111,22 +111,22 @@ npx ai-image-gen gen "Product photo" -s 1024x768 -f jpg
 
 **Blog post hero image (3:2 aspect ratio):**
 ```bash
-npx ai-image-gen gen "Modern office workspace" -s 3:2 -o blog-hero.png
+npx @tmgbabul/ai-image-gen gen "Modern office workspace" -s 3:2 -o blog-hero.png
 ```
 
 **Wide banner (16:9):**
 ```bash
-npx ai-image-gen gen "Technology background" -s 16:9 -q hd
+npx @tmgbabul/ai-image-gen gen "Technology background" -s 16:9 -q hd
 ```
 
 **Social media post (1080x1080):**
 ```bash
-npx ai-image-gen gen "Inspirational quote background" -s 1080x1080
+npx @tmgbabul/ai-image-gen gen "Inspirational quote background" -s 1080x1080
 ```
 
 **Custom dimensions:**
 ```bash
-npx ai-image-gen gen "Website header" -s 1920x600 -f webp
+npx @tmgbabul/ai-image-gen gen "Website header" -s 1920x600 -f webp
 ```
 
 ## How It Works
@@ -161,7 +161,7 @@ npm run dev
 ## Project Structure
 
 ```
-ai-image-generator/
+@tmgbabul/ai-image-generator/
 ├── bin/
 │   └── cli.js                    # Shebang entry point
 ├── src/
@@ -187,7 +187,7 @@ ai-image-generator/
 
 The CLI provides helpful error messages:
 
-- `✗ OpenAI API key not found. Run: ai-image-gen config set OPENAI_API_KEY sk-xxxxx`
+- `✗ OpenAI API key not found. Run: @tmgbabul/ai-image-gen config set OPENAI_API_KEY sk-xxxxx`
 - `✗ Invalid size format. Use aspect ratio (e.g., 3:2) or dimensions (e.g., 1024x768)`
 - `✗ Quality 'hd' requires dall-e-3 model`
 
