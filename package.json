@@ -36,7 +36,7 @@
     "url": "https://github.com/babul/ai-image-gen/issues"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.9.0"
   },
   "files": [
     "dist/",
@@ -50,7 +50,7 @@
     "dotenv": "^17.2.3",
     "openai": "^6.17.0",
     "ora": "^9.1.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@types/node": "^25.1.0",
